@@ -15,7 +15,7 @@
                 </td>
                 <td>원래 가격</td>
                 <td>
-                    <input type ="text" id="aaa">
+                    <input type ="text" id="aaa" value="0">원
                 </td>
 
             </tr>
@@ -23,7 +23,7 @@
                 
                 <td>할인율</td>
                 <td>
-                    <input type ="text" id="bbb">
+                    <input type ="text" id="bbb" value="0">%
                 </td>
 
             </tr>
@@ -38,10 +38,10 @@
         <script>
             function calc(){
                 var a=document.querySelector("#aaa").value;                
-                var b=document.querySelector("#bbb");            
-                var d= a*(b.value/100);
+                var b=document.querySelector("#bbb").value;            
+                var d= a*(b/100);
                 
-                document.querySelector('#result').innerHTML='원래가격은 '+a+ '할인되는 금액'+d+'원 구매 가격은'+(a-d)+'입니다.';
+                document.querySelector('#result').innerHTML='원래가격은 '+a+ '원 할인되는 금액'+d+'원. <br>실 구매 가격은'+(a-d)+'입니다.';
             }
 
         </script>
