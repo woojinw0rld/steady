@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>할인 가격 구하기</title>
+        <style></style>
+
+
+    </head>
+    <body>    
+        <table>
+            <tr>
+                <td rowspan="3">
+                    <img src="images/sale.png">
+                </td>
+                <td>원래 가격</td>
+                <td>
+                    <input type ="text" id="aaa">
+                </td>
+
+            </tr>
+            <tr>
+                
+                <td>할인율</td>
+                <td>
+                    <input type ="text" id="bbb">
+                </td>
+
+            </tr>
+            <tr>                
+                <td colspan="2">
+                    <button type="button" onclick="calc()">할인 가격계산하기</button>
+                </td>                
+            </tr>
+        </table>
+        <div id="result"></div>
+
+        <script>
+            function calc(){
+                var a=document.querySelector("#aaa").value;                
+                var b=document.querySelector("#bbb");            
+                var d= a*(b.value/100);
+                
+                document.querySelector('#result').innerHTML='원래가격은 '+a+ '할인되는 금액'+d+'원 구매 가격은'+(a-d)+'입니다.';
+            }
+
+        </script>
+    </body>
+</html>
