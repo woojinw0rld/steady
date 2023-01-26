@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <style>
+            #desc{
+                display: none; /*desc내용 숨기기*/
+            }
+        </style>
+
+
+    </head>
+    <body>    
+        <div id="item">
+            <img src="images/flower1.jpg">
+            <button  id="open" onclick="show()">상세설명보기</button>
+            <div id="desc" class="detail">
+                <h4>민들레</h4>
+                <p>어디서나 매우 흔하게 모이는... 널리퍼진다.</p>
+                <button onclick="hide()">상세설명닫기</button>
+            </div>
+        </div>
+
+        <script>
+            function show(){
+                document.querySelector("#desc").style.display='block' //나타나기
+                document.querySelector("#open").style.display='none'
+
+            }
+            function hide(){
+                document.querySelector("#desc").style.display='none'
+                document.querySelector("#open").style.display='block'
+
+            }
+        </script>
+    </body>
+</html>
