@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <style>
+            #result{
+                text-align: center;
+                width: 500px;
+                height: 200px;
+                margin: 50px auto; /*네모칸 조정*/
+                padding: 10px; /*네모칸 안에 조정*/
+                border: 1px solid red;
+            }
+        </style>
+
+
+    </head>
+    <body>    
+        <div id="result" value="0";>결과</div>
+        <script>
+            var num=prompt('숫자를 입력해주세요: ','0');
+            var display = document.querySelector('#result');
+            console.log(num%3);
+            if(num != null){
+                if(num%3==0){
+                    display.innerHTML= num+'은 3의 배수가 맞다.';
+                } else {
+                    display.innerHTML= num+'은 3의 배수가 아니다.';
+                }
+            } else {
+                display.innerHTML='취소됨';
+                //alert('입력이 취소됨');
+            }
+        </script>
+    </body>
+</html>

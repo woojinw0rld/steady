@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <style>
+            div {
+                border: 1px solid #ccc;
+                margin: 5px;
+                width: 100px;
+                float: left;
+                text-align: center;
+            }
+            
+        </style>
+
+
+    </head>
+    <body>    
+        <script>
+            for(var i=2; i<=9; i++) {
+                document.write("<div>");
+                document.write("<h3>"+i+"단 </h3>");
+                for(var j=1; j<=9; j++) {
+                    document.write(i+"X"+j+'='+i*j+"<br>");                    
+                }               
+                document.write("</div>");
+            } 
+            
+            
+        </script>
+    </body>
+</html>
