@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <style>         
+            ul{
+                list-style: none;
+              
+            }
+            li{
+                border: 1px solid red;
+                margin: 10px;
+                padding: 10px;
+                width: 50px;
+            }          
+         
+        </style>
+
+
+    </head>
+    <body>    
+        <h1>책 제목으로 살펴보기</h1>
+        <script>
+            function Book(title, author, pages, price) {
+                this.title=title;
+                this.author=author;
+                this.title=title;
+                this.price=price;                
+            }
+            var a=prompt('입력: ');
+
+            book1= new Book(a, "홍길동", 500, 15000);
+            book2= new Book('자바','김길동', 400, 20000);
+            book3= new Book('파이썬','동동동', 400, 20000);
+            var booklist = [book1, book2, book3];
+            document.write('<ul>');
+            for(var i=0; i<booklist.length; i++){
+                document.write("<li>"+booklist[i].title+"</li>");
+            }
+            document.write('</ul>');
+        </script>
+    </body>
+</html>

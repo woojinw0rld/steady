@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <style></style>
+
+
+    </head>
+    <body>    
+        <script>
+            var num1=parseInt(prompt('비교할 첫번째 숫자'));
+            var num2=parseInt(prompt('비교할 두번째 숫자'));
+            function size(aa,bb){
+                if(aa>bb){
+                    document.write(aa+'이'+bb+'보다 큽니다');
+                } else if (bb>aa){
+                    document.write(bb+'이'+aa+'보다 큽니다');
+                } else if (bb==aa){
+                    document.write(aa+'와'+bb+'의 크기는 같습니다.');
+                }
+            }
+            size(num1,num2);
+        </script>
+    </body>
+</html>

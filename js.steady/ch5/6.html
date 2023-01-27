@@ -13,7 +13,7 @@
     </head>
     <body>    
         <div id="item">
-            <img src="images/flower1.jpg">
+            <img src="images/flower1.jpg" id="cover"><br>
             <button  id="open" onclick="show()">상세설명보기</button>
             <div id="desc" class="detail">
                 <h4>민들레</h4>
@@ -23,6 +23,16 @@
         </div>
 
         <script>
+            var cover=document.querySelector("#cover");
+            cover.onclick=function(){
+                alert('눌렀음');
+            }
+            cover.onmouseover=function(){
+                cover.style.border="5px solid black"; //마우스 올렸을 때 5px의 선이 생김 검정
+            }
+            cover.onmouseout=function(){    
+                cover.style.border=""; //null로도 가능 마우스 내렸을 떄
+            }
             function show(){
                 document.querySelector("#desc").style.display='block' //나타나기
                 document.querySelector("#open").style.display='none'

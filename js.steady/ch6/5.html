@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <style>
+            .container{
+                background-color: yellow;
+                width: 350px;
+                margin: 0 auto;
+            }
+            .container::after{ 
+                content: ' ';
+                display: block;
+                clear: both;
+            }
+            /*float left 해제*/
+            .day1{
+                padding-top: 20px;
+                text-align: center;
+            }
+            .day1 h3{
+                font-size: 1.2em;
+                color: #666;
+            }
+            .accent{
+                margin-left: 70px; 
+                margin-right: 70px;           
+                font-family: 'Jua', sans-serif;
+                font-weight: bold;
+                color: #222;
+                background-color: greenyellow;
+            }
+            .bar{
+                background-color: #333;
+                color: #fff;
+                text-align: center;
+            }
+            .day2 ul{
+                list-style: none;
+            }
+            .day2 ul li{
+                border: 1px solid red;
+                width: 120px;
+                height: 30px;
+                float: left;
+                margin: 5px;
+                text-align: center;
+            }
+        </style>
+
+
+    </head>
+    <body>    
+        <div class="container">
+            <div class="day1">
+                <h3>우리 만난지</h3>
+                <p id="accent" class="accent"><span style="font-size: 2em">일</span></p>
+            </div>
+            <div class="bar">기념일 계산</div>
+            <div class="day2">
+                <ul>
+                    <li class="item-title">100일</li>
+                    <li class="item-date" id="date100"></li>
+                </ul>
+                <ul>
+                    <li class="item-title">200일</li>
+                    <li class="item-date" id="date200"></li>
+                </ul>
+                <ul>
+                    <li class="item-title">1년</li>
+                    <li class="item-date" id="date365"></li>
+                </ul>
+                <ul>
+                    <li class="item-title">500일</li>
+                    <li class="item-date" id="date500"></li>
+                </ul>
+                <ul>
+                    <li class="item-title">1000일</li>
+                    <li class="item-date" id="date1000"></li>
+                </ul>
+                <ul>
+                    <li class="item-title">1500일</li>
+                    <li class="item-date" id="date1500"></li>
+                </ul>
+                
+            
+            </div>
+        </div>
+        <script>
+            var now =new Date();
+            var firstday=new Date("2019-12-29");
+            var calDay=(1000*60*60*24);
+            var toNow = now.getTime();
+            var toFirst = firstday.getTime();
+            var passedtime = toNow - toFirst;
+            var passedday = Math.round(passedtime/calDay);
+            document.querySelector('#accent').innerHTML = passedday+1 +'일';
+
+            
+            function calcDate(days){
+                var future = toFirst+days*calDay;
+                var someday = new Date(future);
+
+                var year = someday.getFullYear();
+                var month = someday.getMonth()+1;
+                var date = someday.getDate();
+
+               document.querySelector('#date'+days).innerHTML=year+'년'+month+'월'+date+'일';
+            }
+            calcDate(100);
+            calcDate(200);
+            calcDate(365);
+            calcDate(500);
+            calcDate(1000);
+            calcDate(1500);
+        </script>
+    </body>
+</html>

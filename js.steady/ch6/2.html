@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <style></style>
+
+
+    </head>
+    <body>  
+        <div id="display">출력</div>  
+        <script>    
+            var toyrobt = {
+                productId: '123-12',
+                name: 'Robot',
+                price: "25,000",
+                madeIn:'korea',
+                quantity: 10,
+                showStock: function(){
+                    document.querySelector('#display').innerHTML = this.name+'제품은'+this.quantity+'개 남았습니다';
+
+                }
+            };
+            toyrobt.showStock();
+
+        </script>
+    </body>
+</html>

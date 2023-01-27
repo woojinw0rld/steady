@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <style></style>
+
+
+    </head>
+    <body>    
+        <script>
+            var book={
+                title: '자바스크립트',
+                author:'유셈',
+                pages:500,
+                price:15000,
+                info: function(){
+                    alert(this.title+'책의 분량은'+this.pages+'쪽입니다.'); //this는 자기 객체 안에 정보접근
+                } //info는 함수 이름
+            };
+            document.write(book.title+'<br>');
+            document.write(book.author+'<br>');
+            book.info(); //함수 호출    
+            book.field='IT'; //field=IT 추가
+            
+        </script>
+    </body>
+</html>
