@@ -48,8 +48,6 @@
                 text-align: center;
             }
         </style>
-
-
     </head>
     <body>    
         <div class="container">
@@ -82,9 +80,7 @@
                 <ul>
                     <li class="item-title">1500일</li>
                     <li class="item-date" id="date1500"></li>
-                </ul>
-                
-            
+                </ul>   
             </div>
         </div>
         <script>
@@ -96,16 +92,12 @@
             var passedtime = toNow - toFirst;
             var passedday = Math.round(passedtime/calDay);
             document.querySelector('#accent').innerHTML = passedday+1 +'일';
-
-            
             function calcDate(days){
                 var future = toFirst+days*calDay;
                 var someday = new Date(future);
-
                 var year = someday.getFullYear();
                 var month = someday.getMonth()+1;
                 var date = someday.getDate();
-
                document.querySelector('#date'+days).innerHTML=year+'년'+month+'월'+date+'일';
             }
             calcDate(100);
