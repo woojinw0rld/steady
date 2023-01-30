@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <style>
+            li{
+                display: block;
+            }
+        </style>
+
+
+    </head>
+    <body>    
+        <h1>할일 목록</h1>
+        <ul>
+            <li><span class="chk" onclick="aaa(this)">O</span>할 일 1</li>
+            <li><span class="chk" onclick="aaa(this)">O</span>할 일 2</li>
+            <li><span class="chk" onclick="aaa(this)">O</span>할 일 3</li>
+        </ul>
+    </body>
+</html>
+<script>
+    
+    function aaa(a){
+        a.parentNode.style.color='#ccc'
+    }
+
+</script>

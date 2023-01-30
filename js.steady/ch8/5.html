@@ -24,12 +24,13 @@
 </html>
 <script>
     var myRect =document.querySelector('#rect');
-    myRect.addEventListener("mouseover", function(){
+    myRect.addEventListener("mouseover", qqq);
+    function qqq(){
         myRect.style.backgroundColor='green';
         myRect.style.borderRadius = '50%';
-    });
-    myRect.addEventListener("mouseout",function(){
+    }
+    myRect.addEventListener("mouseout",function(){  
         myRect.style.backgroundColor='';
         myRect.style.borderRadius='';
-    });
+    });   //이 함수는 익명함수의 형태이다.
 </script>

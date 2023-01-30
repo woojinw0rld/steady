@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <style></style>
+      
+
+    </head>
+    <body>    
+        <div id="container">
+            <h1>참가신청</h1>
+            <form action="">
+                <input type="text" id="userName" placeholder="이름" required>
+                <button onclick="newRegister(); return false"> 신청</button>
+            </form>
+            <hr>
+            <div id="nameList"></div>
+        </div>
+    </body>
+</html>
+<script>
+    function newRegister(){
+        var newP = document.createElement('p');
+        var userName = document.querySelector('#userName');
+        var newText = document.createTextNode(userName.value);
+        newP.appendChild(newText);  //글자 추가 
+        
+        var delBtn=document.createElement('span');
+        var delTxt=document.createTextNode('X');
+        delBtn.setAttribute('class','del');
+        delBtn.appendChild(delTxt); //span안에 글자 추가
+        newP.appendChild(delBtn);  //newp에 span추가 
+
+        var nameList=document.querySelector('#nameList');
+        //nameList.appendChild(newP);
+        nameList.insertBefore(newP,nameList.childNodes[0]);
+        userName.value="";
+        userName.focus();
+
+        var removeBtn=document.querySelectorAll(".del");
+        for(var i=0; i<removeBtn.length; i++){
+            removeBtn[i].addEventListener("click", function(){
+                if(this.parentNode.parentNode)
+                this.parentNode.parentNode.removeChild(this.parentNode);
+            });
+        }
+    }
+</script>

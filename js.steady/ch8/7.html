@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <style>
+            .accent{
+                color: red;
+                margin: 0 auto;
+                text-align: center;
+            }
+        </style>
+
+
+    </head>
+    <body>    
+        <!-- <p>주문이 완료되었습니다.</p>         -->
+    </body>
+</html>
+<script>
+    var p=document.createElement('p');
+    var t=document.createTextNode('주문이 완료되었습니다.');
+    p.appendChild(t)
+    document.body.appendChild(p);
+    p.addEventListener('click',function(){
+        p.setAttribute("class","accent");
+    })
+</script>
