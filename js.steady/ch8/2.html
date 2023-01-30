@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <style>
+            .container{
+                border: 1px solid #ccc;
+                width: 700px;
+                margin: 0 auto;
+            }
+            .container::after{
+                content: '';
+                display: block;
+                clear: both;
+            }
+            #prod-img{
+                float: left;
+                            
+            }
+            #prod-img img{
+               width: 300px;
+            }
+            #desc{
+                float: left;
+                width: 300px;
+                margin: 10px;
+            }
+
+        </style>
+
+
+    </head>
+    <body>
+        <div class="container">
+            <h1 id="heading">에디오피아 게뎁</h1>
+            <div id="prod-img">
+                <img src="images/coffee-pink.jpg">
+            </div>
+            <div id="desc">
+                <h2 class="bright">Information</h2>
+                <p>2차 세계대전 이후 설립된 <span class='accent'>게뎁 농장은...</span>
+                <span class="accent">SCAA 인증</span>을 받은...</p>
+                <h2>Flavor Note</h2>
+                <p class="bright">은은하고 다채로운 꽃향....</p>
+            </div>
+        </div>
+    </body>
+</html>
+<script>
+    var a = document.getElementsByTagName("h2")[0];
+    a.style.backgroundColor= "#aaa";
+    var b = document.querySelectorAll(".accent")[0]];
+    b.style.backgroundColor= "yellow";
+</script>

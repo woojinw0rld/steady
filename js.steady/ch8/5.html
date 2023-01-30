@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <style>
+            #rect{
+                border: 1px solid black;
+                width: 200px;
+                height: 200px;
+                margin: 0 auto;
+            }
+            body{
+                text-align: center;
+            }
+        </style>
+
+
+    </head>
+    <body>    
+        도형위로 마우스 포인터를 올려 놓으세요.
+        <div id="rect"></div>
+    </body>
+</html>
+<script>
+    var myRect =document.querySelector('#rect');
+    myRect.addEventListener("mouseover", function(){
+        myRect.style.backgroundColor='green';
+        myRect.style.borderRadius = '50%';
+    });
+    myRect.addEventListener("mouseout",function(){
+        myRect.style.backgroundColor='';
+        myRect.style.borderRadius='';
+    });
+</script>
